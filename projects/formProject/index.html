@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>DEV PROJECT 1</title>
+  </head>
+  <body>
+    <main>
+      <div class="layout-of-master-layout">
+        <nav class="nav-container">
+          <ul class="navigation">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Products</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <header>
+        <h1 class="title">Good Vibes Form</h1>
+      </header>
+      <section class="main-section">
+        <p id="description">
+          Tell us something positive that happened to you today.
+        </p>
+        <form id="survey-form" action="../Submit.html">
+          <!-- for Name -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="name" id="name">Name</label>
+            </div>
+            <div class="fields">
+              <input
+                type="text"
+                id="name"
+                class="inputFields"
+                placeholder="Enter your name"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- for Email -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="email" id="email">Email</label>
+            </div>
+            <div class="fields">
+              <input
+                type="email"
+                id="email"
+                class="inputFields"
+                placeholder="Enter your email address"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- for Scale -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="number" id="number"
+                >On a scale of 1-10, how good was it?</label
+              >
+            </div>
+            <div class="fields">
+              <input
+                type="number"
+                class="inputFields"
+                id="number"
+                placeholder="Enter a number between 1 and 10"
+                min="1"
+                max="10"
+              />
+            </div>
+          </div>
+
+          <!-- Dropdown -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="dropdown" id="dropdown">Where did it happen?</label>
+            </div>
+            <div class="fields">
+              <select
+                type="dropdown"
+                id="dropdown"
+                name="Location of positive event"
+                class="dropdown"
+              >
+                <option value="home">At home</option>
+                <option value="commute">On my commute</option>
+                <option value="work">At work</option>
+                <option value="outside">On the street</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Radio Button -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="time-of-day"
+                >At what time of day did it happen?</label
+              >
+            </div>
+            <div class="fields">
+              <ul id="time-of-day">
+                <li class="radio">
+                  <label
+                    >Morning
+                    <input
+                      type="radio"
+                      name="time-radio"
+                      value="1"
+                      class="userSelection"
+                    />
+                  </label>
+                </li>
+                <li class="radio">
+                  <label
+                    >Afternoon
+                    <input
+                      type="radio"
+                      name="time-radio"
+                      value="2"
+                      class="userSelection"
+                    />
+                  </label>
+                </li>
+                <li class="radio">
+                  <label
+                    >Evening
+                    <input
+                      type="radio"
+                      name="time-radio"
+                      value="3"
+                      class="userSelection"
+                    />
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Checkbox -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="feelings"
+                >What emotions did you experience? <br />
+                (Select all that apply)</label
+              >
+            </div>
+            <div class="fields">
+              <ul id="feelings">
+                <li class="radio">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="feeling-check"
+                      value="1"
+                      class="userSelection"
+                    />Exited</label
+                  >
+                </li>
+                <li class="radio">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="feeling-check"
+                      value="2"
+                      class="userSelection"
+                    />Humbled</label
+                  >
+                </li>
+                <li class="radio">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="feeling-check"
+                      value="3"
+                      class="userSelection"
+                    />Elated</label
+                  >
+                </li>
+                <li class="radio">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="feeling-check"
+                      value="4"
+                      class="userSelection"
+                    />Loved</label
+                  >
+                </li>
+                <li class="radio">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="feeling-check"
+                      value="5"
+                      class="userSelection"
+                    />Enthusiastic</label
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Text Area -->
+          <div class="form-row">
+            <div class="labels">
+              <label for="event-details"
+                >Please describe your positive experience.</label
+              >
+            </div>
+            <div class="fields">
+              <textarea
+                name="event-details"
+                cols="1"
+                rows="1"
+                placeholder="Enter your experience here..."
+                class="textArea"
+                wrap="hard"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="labels">
+              <label for="file-upload" id="file">Upload File</label>
+            </div>
+            <div class="fields">
+              <input
+                type="file"
+                id="inpFile"
+                class="inputFields"
+                name="inpFile"
+                placeholder="Upload file (img, jpg, audo, doc)"
+                required
+              />
+            </div>
+            <div class="imgPreview" id="imgPreview">
+              <img src="" alt="image Previewer" class="imgPreviewImage" />
+              <span class="imgPreviewText">Image Preview</span>
+            </div>
+          </div>
+          <div>
+            <button class="button" id="submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </section>
+      <div class="footer-container">
+        <footer class="footer">&copy;Succynice</footer>
+      </div>
+    </main>
+
+    <script>
+      const inpFile = document.getElementById("inpFile");
+      const previewContainer = document.getElementById("imgPreview");
+      const previewImage = previewContainer.querySelector(".imgPreviewImage");
+      const previewDefaultText =
+        previewContainer.querySelector(".imgPreviewText");
+
+      inpFile.addEventListener("change", function () {
+        const file = this.files[0];
+
+        if (file) {
+          const reader = new FileReader();
+
+          previewDefaultText.style.display = "none";
+          previewImage.style.display = "block";
+
+          reader.addEventListener("load", function () {
+            previewImage.setAttribute("src", this.result);
+          });
+
+          reader.readAsDataURL(file);
+        } else {
+          previewDefaultText.style.display = "null";
+          previewImage.style.display = "null";
+          previewImage.setAttribute("src", "");
+        }
+      });
+    </script>
+  </body>
+</html>

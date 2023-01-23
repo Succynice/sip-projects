@@ -1,0 +1,291 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #a9d7e9;
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: bolder;
+}
+
+p {
+  font-size: 22px;
+}
+
+.main-section {
+  width: 800px;
+  margin: auto;
+  border-radius: 7px;
+  background-color: #f3f3f3;
+  padding: 20px 10px 10px 10px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 30px;
+}
+
+/* xxxxxxxxxxxxxxxxxxxxxxxxxxx
+  NAVIGATION CONTROL
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx*/
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+}
+
+.navigation a {
+  text-decoration: none;
+  display: block;
+  padding: 1.5rem;
+  color: white;
+  font-size: var(--font-size-large);
+  font-size: 1.5rem;
+}
+
+.navigation a:hover {
+  background: #1565c0;
+  font-style: italic;
+}
+
+.form-rows {
+  position: static;
+  display: block;
+}
+
+.fields {
+  display: inline-block;
+  text-align: left;
+  width: 40%;
+  vertical-align: middle;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  margin-top: 10px;
+  vertical-align: top;
+  font-weight: bold;
+}
+
+.inputFields {
+  height: 25px;
+  width: 280px;
+  padding: 5px;
+  margin: 10px;
+  border: 1px solid #c0c0c0;
+}
+
+.dropdown {
+  height: 40px;
+  width: 200px;
+  padding: 5px;
+  margin: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+}
+
+.radio {
+  position: relative;
+  left: -43px;
+  margin: 0 0 10px 10px;
+  display: block;
+}
+
+.userSelection {
+  float: left;
+  margin-right: 8px;
+}
+
+.button {
+  font-size: 1em;
+  background-color: #6ba2ce;
+  color: white;
+  border: 0px solid;
+  border-radius: 4px;
+  height: 40px;
+  width: 80px;
+  margin: 10px;
+}
+
+#time-of-day,
+#feelings {
+  list-style: none;
+}
+
+.textArea {
+  height: 50px;
+  resize: vertical;
+  font-family: Tahoma, sans-serif;
+  width: 300px;
+  border-radius: 4px;
+  padding: 5px 10px;
+}
+
+/*  IMAGE PREVIEW */
+.imgPreview {
+  width: 400px;
+  min-height: 200px;
+  margin-top: 15px;
+  border: 3px solid gray;
+  margin: auto;
+
+  /*Default Text style*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #cccccc;
+  font-weight: bold;
+}
+
+.imgPreviewImage {
+  display: none;
+  width: 100%;
+}
+
+/* PSEUDO CLASSES */
+.dropdown:hover {
+  padding: 10px;
+}
+
+.radio:hover {
+  padding: 5px;
+  color: crimson;
+  font-style: italic;
+}
+
+.inputFields:hover {
+  border: 2px dashed crimson;
+  border-radius: 7px;
+  padding: 7px;
+}
+
+.textArea:hover {
+  padding: 5px;
+  border: 2px dashed crimson;
+}
+
+.textArea:focus {
+  border: 0.2rem dashed #4b4b4b;
+  outline: none;
+}
+
+button:hover {
+  background-color: #367fbb;
+  opacity: 1;
+  color: crimson;
+  position: relative;
+  top: 6px;
+}
+
+
+/* FOOTER */
+.footer-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+
+  list-style: none;
+  margin: 0;
+  background: deepskyblue;
+  margin-top: 30px;
+  /* padding: 10px; */
+  /* border-radius: 0 0 10px 10px; */
+}
+
+.footer {
+  color: var(--color-white);
+  font-family: var(--font-family-title);
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-regular);
+  padding: 5px;
+  font-size: 1.8rem;
+}
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 833px) {
+  .main-section {
+    width: 70%;
+  }
+
+  .fields {
+    display: inline-block;
+    text-align: left;
+    width: 48%;
+    vertical-align: middle;
+  }
+
+  .inputFields {
+    width: 80%;
+  }
+
+  .dropdown {
+    width: 80%;
+  }
+
+  .textArea {
+    width: 80%;
+  }
+}
+
+@media (max-width: 520px) {
+  .main-section {
+    width: 80%;
+  }
+
+  .fields {
+    width: 80%;
+    float: left;
+  }
+  .labels {
+    width: 100%;
+    text-align: left;
+  }
+
+  .inputFields {
+    width: 100%;
+  }
+
+  .dropdown {
+    width: 100%;
+  }
+
+  .textArea {
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 850px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}

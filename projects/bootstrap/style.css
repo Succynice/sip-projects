@@ -15,7 +15,7 @@ body {
 .nav-img {
   height: 45px;
   width: 45px;
-  background: url('/assets/pic-person-03.jpg') no-repeat;
+  background: url('./assets/pic-person-03.jpg') no-repeat;
   background-size: cover;
 
   border-radius: 2rem;
